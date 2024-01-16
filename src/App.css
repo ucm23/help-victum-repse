@@ -79,6 +79,9 @@
 :where(.css-dev-only-do-not-override-zl9ks2).ant-layout-header {
   padding: 0 24px;
 }
+:where(.css-zl9ks2).ant-layout-header {
+  padding: 0 24px;
+}
 
 .sub-title-h1 {
   font-size: 20px;
