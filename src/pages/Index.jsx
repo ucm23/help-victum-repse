@@ -10,6 +10,10 @@ import {
 import { Divider } from '@chakra-ui/react'
 import { useLocation } from "react-router-dom";
 import { Kbd } from '@chakra-ui/react'
+import {
+    RightOutlined,
+    LeftOutlined
+} from '@ant-design/icons';
 
 
 const data = {
@@ -28,10 +32,17 @@ const data = {
         ],
         pagination: [
             {
+                label: '',
+                title: '',
+                url: '',
+                slide: '',
+            },
+            {
                 label: 'Siguiente',
                 title: 'Registro',
                 url: '/register',
-                slide: 'left'
+                slide: 'right',
+                icon: <RightOutlined />
             }
         ]
     },
@@ -58,13 +69,15 @@ const data = {
                 label: 'Anterior',
                 title: 'Inicio',
                 url: '/',
-                slide: 'left'
+                slide: 'left',
+                icon: <LeftOutlined />
             },
             {
                 label: 'Siguiente',
                 title: 'Requisiciones',
                 url: '/requisitions',
-                slide: 'right'
+                slide: 'right',
+                icon: <RightOutlined />
             }
         ]
     },
@@ -91,13 +104,15 @@ const data = {
                 label: 'Anterior',
                 title: 'Registro',
                 url: '/register',
-                slide: 'left'
+                slide: 'left',
+                icon: <LeftOutlined />
             },
             {
                 label: 'Siguiente',
                 title: ' Órdenes de Compra',
                 url: '/orders',
-                slide: 'right'
+                slide: 'right',
+                icon: <RightOutlined />
             }
         ]
     },
@@ -125,7 +140,8 @@ const data = {
                 label: 'Anterior',
                 title: 'Requisiciones',
                 url: '/requisitions',
-                slide: 'left'
+                slide: 'left',
+                icon: <LeftOutlined />
             }
         ]
     },
@@ -190,9 +206,12 @@ const Index = () => {
             <Divider />
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: 25, justifyContent: 'space-between' }}>
                 {data[pathname]?.pagination.map((item, index) => (
-                    <a href={`${item?.url}`} key={`${index}-${item?.title}`}>
-                        <h3 style={{ fontSize: 11, textAlign: item?.slide, color: 'gray', margin: '5px 0' }}>{item?.label}</h3>
-                        <h4 style={{ textAlign: item?.slide }}>{item?.title}</h4>
+                    <a href={`${item?.url}`} key={`${index}-${item?.title}`} style={{ display: 'flex', flexDirection: item?.slide === 'left' ? 'row' : 'row-reverse', gap: 5 }}>
+                        {item?.icon}
+                        <div style={{}}>
+                            <h3 style={{ fontSize: 11, textAlign: item?.slide, color: 'gray', margin: '5px 0' }}>{item?.label}</h3>
+                            <h4 style={{ textAlign: item?.slide }}>{item?.title}</h4>
+                        </div>
                     </a>
 
                 ))}
