@@ -153,6 +153,16 @@ const Index = () => {
 
     return (
         <NavBar>
+            {pathname === '/' &&
+                <center>
+                    <img
+                        src={'https://images.ctfassets.net/p03bi75xct27/6Kn56xuigehLU4wBFdRYu6/0035cc36b77cd33ca3c537874b37f9db/Digitale-Personalakte_Software.png?q=80&fm=webp&w=2048'}
+                        alt={'help'}
+                        className="img-home"
+                    />
+                </center>
+            }
+
             <h2>{data[pathname]?.title}</h2>
             <p>
                 <div dangerouslySetInnerHTML={{ __html: data[pathname]?.intro }} />
