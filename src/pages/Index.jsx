@@ -15,7 +15,7 @@ import { Kbd } from '@chakra-ui/react'
 const data = {
     '/': {
         title: 'Inicio',
-        intro: 'Victum REPSE se dedica a eliminar barreras en el uso de <Kbd>plataformas</Kbd>. Con un equipo especializado, capacitaciones y relevamientos, buscamos mejorar la accesibilidad diaria.',
+        intro: '<Kbd>Victum REPSE</Kbd> se dedica a eliminar barreras en el uso de <Kbd>plataformas</Kbd>. Con un equipo especializado, capacitaciones y relevamientos, buscamos mejorar la accesibilidad diaria.',
         'sub-title-1': '¿A qué nos referimos con AYUDA?',
         'sub-conte-1': 'El presente <Kbd>manual</Kbd> o ambiente nos da un <Kbd>desglose</Kbd> de como son los flujos de los procesos en cada uno de los módulos en Victum REPSE (es decir; asistencia, apoyo o colaboración). <br/><br/>También puede hacer referencia a información o recursos que facilitan la comprensión o resolución de problemas.',
         'sub-title-2': 'Estructura de cada proceso',
