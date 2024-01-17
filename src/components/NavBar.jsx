@@ -10,7 +10,7 @@ const { Header, Content, Sider } = Layout;
 const menu = [
     {
         label: 'Inicio',
-        icon: React.createElement(HomeOutlined),        
+        icon: React.createElement(HomeOutlined),
         route: '/'
     },
     {
@@ -38,57 +38,58 @@ const NavBar = ({ children }) => {
 
     return (
         <Layout
-        style={{
-            height: '100%',
-        }}
-    >
-        <Header
             style={{
-                display: 'flex',
-                alignItems: 'center',
-                background: 'white',
+                height: '100vh',
             }}
         >
-            <h1 className="title-h1">Ayuda digital de VICTUM-REPSE</h1>
-        </Header>
-        <Divider />
-        <Layout>
-            <Sider
-                width={200}
+            <Header
                 style={{
-                    background: colorBgContainer,
+                    display: 'flex',
+                    alignItems: 'center',
+                    background: 'white',
                 }}
             >
-                <Menu
-                    mode="inline"
-                    defaultSelectedKeys={['0']}
-                    //defaultOpenKeys={['sub1']}
+                <h1 className="title-h1">Ayuda digital de VICTUM-REPSE</h1>
+            </Header>
+            <Divider />
+            <Layout>
+                <Sider
+                    width={200}
                     style={{
-                        height: '100%',
-                        borderRight: 0,
+                        background: colorBgContainer,
                     }}
                 >
-                    {menu.map((item, index) => (
-                        <Menu.Item key={index}>
-                            <Link to={item.route}>
-                                <span>{item.icon} &nbsp; {item.label}</span>
-                            </Link>
-                        </Menu.Item>
-                    ))}
-                </Menu>
-            </Sider>
-            <Layout
-                style={{
-                    padding: '50px 100px',
-                    margin: '0 auto'
-                }}
-            >
-                <Content>
-                    {children}
-                </Content>
+                    <Menu
+                        mode="inline"
+                        defaultSelectedKeys={['0']}
+                        //defaultOpenKeys={['sub1']}
+                        style={{
+                            height: '100%',
+                            borderRight: 0,
+                        }}
+                    >
+                        {menu.map((item, index) => (
+                            <Menu.Item key={index}>
+                                <Link to={item.route}>
+                                    <span>{item.icon} &nbsp; {item.label}</span>
+                                </Link>
+                            </Menu.Item>
+                        ))}
+                    </Menu>
+                </Sider>
+                <Layout
+                    style={{
+                        padding: '50px 100px',
+                        margin: '0 auto',
+                        overflow: 'auto',
+                    }}
+                >
+                    <Content>
+                        {children}
+                    </Content>
+                </Layout>
             </Layout>
         </Layout>
-    </Layout>
     )
 }
 

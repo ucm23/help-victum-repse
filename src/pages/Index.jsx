@@ -168,23 +168,21 @@ const Index = () => {
                 <div dangerouslySetInnerHTML={{ __html: data[pathname]?.intro }} />
             </p>
             <Divider />
-            <div className='pillar' />
-            <h3>{data[pathname]['sub-title-1']}</h3>
-            <p>
-                <div dangerouslySetInnerHTML={{ __html: data[pathname]['sub-conte-1'] }} />
-            </p>
-            <div className='pillar' />
-            <h3>{data[pathname]['sub-title-2']}</h3>
-            <p>
-                <div dangerouslySetInnerHTML={{ __html: data[pathname]['sub-descr-2'] }} />
-            </p>
+            {[1, 2].map(item => (
+                <>
+                    <div className='pillar' />
+                    <h3>{data[pathname][`sub-title-${item}`]}</h3>
+                    <p>
+                        <div dangerouslySetInnerHTML={{ __html: data[pathname][`sub-conte-${item}`] }} />
+                    </p>
+                </>
+            ))}
             <UnorderedList spacing={0}>
                 {data[pathname]['sub-pros--2'].map((item, index) => (
                     <ListItem key={`list-${pathname}-${index}`}>
                         <p><div dangerouslySetInnerHTML={{ __html: item }} /></p>
                     </ListItem>
                 ))}
-
             </UnorderedList>
             {pathname !== '/' && <div className='pillar' />}
 
@@ -205,16 +203,16 @@ const Index = () => {
                     <p>
                         <div dangerouslySetInnerHTML={{ __html: data[pathname]['sub-descr-4'] }} />
                     </p>
-                    <div className="andes-card">
-                        <img width="40" height="40" decoding="async" src="https://www.seduvi.cdmx.gob.mx/storage/app/media/uploaded-files/pdf.png" alt="" />
-                        <span>
-                            Manual <a target="_blank" href={`/manuales-pdf/${data[pathname]['sub-downl-4']}.pdf`}> {data[pathname]?.label}</a>.pdf
-                        </span>
-                    </div>
+                    <a target="_blank" href={`/manuales-pdf/${data[pathname]['sub-downl-4']}.pdf`}>
+                        <div className="andes-card">
+                            <img width="40" height="40" decoding="async" src="https://www.seduvi.cdmx.gob.mx/storage/app/media/uploaded-files/pdf.png" alt="" />
+                            Manual {data[pathname]?.label}.pdf
+                        </div>
+                    </a>
                 </>
             }
             <Divider />
-            <div style={{ display: 'flex', flexDirection: 'row', marginTop: 25, justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', marginTop: 25, paddingBottom: 25, justifyContent: 'space-between' }}>
                 {data[pathname]?.pagination.map((item, index) => (
                     <a href={`${item?.url}`} key={`${index}-${item?.title}`} style={{ display: 'flex', flexDirection: item?.slide === 'left' ? 'row' : 'row-reverse', gap: 5 }}>
                         {item?.icon}
@@ -226,6 +224,14 @@ const Index = () => {
 
                 ))}
             </div>
+            <div style={{ paddingBottom: 25 }}>
+                <center>
+                    <p style={{ fontSize: 12, fontStyle: 'italic' }}>
+                        Desarrollado por <a target="_blank" href={`https://consultores-cti.com.mx/`}>Grupo CTI Tech-IN POS</a><br />© 2024 Grupo CTI Tech-IN POS. Todos los derechos reservados.
+                    </p>
+                </center>
+            </div>
+
         </NavBar>
     );
 };

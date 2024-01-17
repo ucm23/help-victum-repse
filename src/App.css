@@ -66,6 +66,7 @@
 .ant-layout.css-dev-only-do-not-override-zl9ks2 {
   min-height: 93vh;
 }
+
 .ant-layout.css-zl9ks2 {
   min-height: 93vh;
 }
@@ -82,6 +83,7 @@
 :where(.css-dev-only-do-not-override-zl9ks2).ant-layout-header {
   padding: 0 24px;
 }
+
 :where(.css-zl9ks2).ant-layout-header {
   padding: 0 24px;
 }
@@ -100,14 +102,10 @@
 .pillar {
   content: "";
   display: block;
-  width: 120px;
-  height: 8px;
+  width: 150px;
+  height: 4px;
   background: #a5a4a4;
   margin: 22px 0 12px;
-}
-
-kbd {
-  color: blueviolet;
 }
 
 h2 {
@@ -180,9 +178,19 @@ h4 {
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 12px;
   font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
   margin-bottom: 22px;
+}
+
+Kbd {
+  color: blueviolet;
+  font-size: .95em;
+}
+
+
+kbd:hover, a:hover, img:hover {
+  cursor: crosshair;
 }
