@@ -40,6 +40,7 @@ const NavBar = ({ children }) => {
         <Layout
             style={{
                 height: '100vh',
+                overflow: 'hidden'
             }}
         >
             <Header
