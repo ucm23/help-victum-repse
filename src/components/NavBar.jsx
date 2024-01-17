@@ -31,7 +31,7 @@ const menu = [
 ]
 
 
-const NavBar = ({ children }) => {
+const NavBar = ({ index, children }) => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
@@ -62,7 +62,7 @@ const NavBar = ({ children }) => {
                 >
                     <Menu
                         mode="inline"
-                        defaultSelectedKeys={['0']}
+                        defaultSelectedKeys={[`${index}`]}
                         //defaultOpenKeys={['sub1']}
                         style={{
                             height: '100%',

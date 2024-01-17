@@ -18,6 +18,7 @@ import {
 
 const data = {
     '/': {
+        index: 0,
         title: 'Inicio',
         intro: '<Kbd>Victum REPSE</Kbd> se dedica a eliminar barreras en el uso de <Kbd>plataformas</Kbd>. Con un equipo especializado, capacitaciones y relevamientos, buscamos mejorar la accesibilidad diaria.',
         'sub-title-1': '¿A qué nos referimos con AYUDA?',
@@ -47,6 +48,7 @@ const data = {
         ]
     },
     '/register': {
+        index: 1,
         title: 'Alta, Aprobación y Baja de Proveedores',
         label: 'Alta, Aprobación y Baja de Proveedores',
         intro: 'Facilitamos el acceso a nuestras plataformas con un equipo experto y capacitaciones. Agilizamos el <Kbd>alta</Kbd> y <Kbd>aprobación</Kbd> de proveedores para mejorar la experiencia de usuario.',
@@ -82,6 +84,7 @@ const data = {
         ]
     },
     '/requisitions': {
+        index: 2,
         title: 'Proceso de las Requisiciones',
         label: 'Requisiciones',
         intro: '<Kbd>Gestionamos</Kbd> eficazmente las <Kbd>requisiciones</Kbd> y <Kbd>aprobaciones</Kbd> con Victum REPSE, simplificando las actividades de compras y brindando apoyo al personal involucrado.',
@@ -117,6 +120,7 @@ const data = {
         ]
     },
     '/orders': {
+        index: 3,
         title: 'Proceso de las Órdenes de Compra',
         label: 'Órdenes de Compra',
         intro: '<Kbd>Optimizamos</Kbd> el proceso de órdenes de compra, facilitando la gestión de compras con proveedores para garantizar eficacia y apoyo al personal involucrado.',
@@ -152,7 +156,7 @@ const Index = () => {
     const { pathname } = location;
 
     return (
-        <NavBar>
+        <NavBar index={data[pathname]?.index}>
             {pathname === '/' &&
                 <center>
                     <img
