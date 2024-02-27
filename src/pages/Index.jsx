@@ -76,6 +76,41 @@ const data = {
             },
             {
                 label: 'Siguiente',
+                title: 'Nuevos accesos',
+                url: '/access',
+                slide: 'right',
+                icon: <RightOutlined />
+            }
+        ]
+    },
+    '/access': {
+        index: 1,
+        title: 'Alta de nuevos accesos',
+        label: 'Alta de nuevos accesos',
+        intro: 'Agilizamos el alta de <Kbd>socios comerciales (proveedores)</Kbd> y <Kbd>administradores</Kbd> para mejorar la experiencia de usuario.',
+        'sub-title-1': '¿A quiénes y con qué propósito damos de alta a proveedores?',
+        'sub-conte-1': 'Damos de alta a socios comerciales (proveedores) y administradores el un sistema para incorporar sus <Kbd>datos</Kbd> y <Kbd>servicios</Kbd>. <br/><br/>Este proceso sirve para gestionar y facilitar <Kbd>transacciones</Kbd>, mejorando la eficiencia y la relación con los nuevos usuarios.',
+        'sub-title-2': 'Conceptos a tomar en cuenta',
+        'sub-descr-2': 'Para que el proceso de Alta de nuevos usuarios se pueda llevar acabo, es necesario tomar en cuenta los siguientes <Kbd>criterios</Kbd>:',
+        'sub-pros--2': [
+            'Por parte de los <Kbd>Administradores</Kbd>: Verificar y validar con <Kbd>responsabilidad</Kbd> cada uno de los datos proporcionados para cada uno de los nuevos usuarios.',
+            'Por parte de los <Kbd>Proveedores</Kbd>: Tener conocimiento de como entrar a la plataforma (<a href="https://development.victum-re.online/">Click aquí</a>).',
+        ],
+        'sub-title-3': 'Diagrama de flujo',
+        'sub-descr-3': 'Un <Kbd>ejemplo</Kbd> del proceso de Alta de nuevos usuarios, se <Kbd>visualiza</Kbd> y <Kbd>separa</Kbd> la participación de cada <Kbd>rol</Kbd> involucrado:',
+        diagram: '/imgs/nuevos-usuarios.png',
+        'sub-title-4': 'Manual (PDF)',
+        'sub-descr-4': 'Incluye <Kbd>Glosario</Kbd> y un ejemplo con <Kbd>capturas de pantalla</Kbd>:',
+        pagination: [
+            {
+                label: 'Anterior',
+                title: 'Registro',
+                url: '/register',
+                slide: 'left',
+                icon: <LeftOutlined />
+            },
+            {
+                label: 'Siguiente',
                 title: 'Requisiciones',
                 url: '/requisitions',
                 slide: 'right',
@@ -84,7 +119,7 @@ const data = {
         ]
     },
     '/requisitions': {
-        index: 2,
+        index: 3,
         title: 'Proceso de las Requisiciones',
         label: 'Requisiciones',
         intro: '<Kbd>Gestionamos</Kbd> eficazmente las <Kbd>requisiciones</Kbd> y <Kbd>aprobaciones</Kbd> con Victum REPSE, simplificando las actividades de compras y brindando apoyo al personal involucrado.',
@@ -105,8 +140,8 @@ const data = {
         pagination: [
             {
                 label: 'Anterior',
-                title: 'Registro',
-                url: '/register',
+                title: 'Nuevos accesos',
+                url: '/access',
                 slide: 'left',
                 icon: <LeftOutlined />
             },
@@ -120,7 +155,7 @@ const data = {
         ]
     },
     '/orders': {
-        index: 3,
+        index: 4,
         title: 'Proceso de las Órdenes de Compra',
         label: 'Órdenes de Compra',
         intro: '<Kbd>Optimizamos</Kbd> el proceso de órdenes de compra, facilitando la gestión de compras con proveedores para garantizar eficacia y apoyo al personal involucrado.',
@@ -209,7 +244,7 @@ const Index = () => {
                     </p>
                     <a target="_blank" href={`/manuales-pdf/${data[pathname]['sub-downl-4']}.pdf`}>
                         <div className="andes-card">
-                            <img width="40" height="40" decoding="async" src="https://www.seduvi.cdmx.gob.mx/storage/app/media/uploaded-files/pdf.png" alt="" />
+                            <img width="40" height="40" decoding="async" src="https://www.seduvi.cdmx.gob.mx/storage/app/media/uploaded-files/pdf.png" alt="icon-pdf" />
                             Manual {data[pathname]?.label}.pdf
                         </div>
                     </a>

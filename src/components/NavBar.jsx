@@ -19,6 +19,11 @@ const menu = [
         route: '/register'
     },
     {
+        label: 'Nuevos Accesos',
+        icon: React.createElement(UserOutlined),
+        route: '/access'
+    },
+    {
         label: 'Requisiciones',
         icon: React.createElement(FileDoneOutlined),
         route: '/requisitions'
