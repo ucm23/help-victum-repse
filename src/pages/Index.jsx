@@ -15,7 +15,6 @@ import {
     LeftOutlined
 } from '@ant-design/icons';
 
-
 const data = {
     '/': {
         index: 0,
@@ -84,7 +83,7 @@ const data = {
         ]
     },
     '/access': {
-        index: 1,
+        index: 2,
         title: 'Alta de nuevos accesos',
         label: 'Alta de nuevos accesos',
         intro: 'Agilizamos el alta de <Kbd>socios comerciales (proveedores)</Kbd> y <Kbd>administradores</Kbd> para mejorar la experiencia de usuario.',
