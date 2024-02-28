@@ -1,5 +1,6 @@
 import React from 'react';
-import { FileDoneOutlined, HomeOutlined, UserOutlined, FileProtectOutlined, UserAddOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+import { FileDoneOutlined, HomeOutlined, UserOutlined, FileProtectOutlined, UserAddOutlined, MenuOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { Divider } from '@chakra-ui/react'
 
@@ -41,6 +42,8 @@ const NavBar = ({ index, children }) => {
         token: { colorBgContainer },
     } = theme.useToken();
 
+    const [collapsed, setCollapsed] = useState(false);
+
     return (
         <Layout
             style={{
@@ -55,16 +58,25 @@ const NavBar = ({ index, children }) => {
                     background: 'white',
                 }}
             >
-                <h1 className="title-h1">Ayuda digital de VICTUM-REPSE</h1>
+                <h1 className="title-h1">
+                    <MenuOutlined
+                        onClick={() => setCollapsed(!collapsed)}
+                    />
+                    &nbsp; &nbsp; &nbsp; Ayuda digital
+                </h1>
             </Header>
             <Divider />
             <Layout>
                 <Sider
-                    width={200}
+                    //collapsible 
+                    collapsed={collapsed} 
+                    //onCollapse={(value) => setCollapsed(value)}
+                    //width={collapsed ? 0 : 225}
                     style={{
                         background: colorBgContainer,
                     }}
                 >
+                    <div className="demo-logo-vertical" />
                     <Menu
                         mode="inline"
                         defaultSelectedKeys={[`${index}`]}
@@ -77,18 +89,14 @@ const NavBar = ({ index, children }) => {
                         {menu.map((item, index) => (
                             <Menu.Item key={index}>
                                 <Link to={item.route}>
-                                    <span>{item.icon} &nbsp; {item.label}</span>
+                                    <span>{item.icon} &nbsp; <span>{item.label} </span> </span>
                                 </Link>
                             </Menu.Item>
                         ))}
                     </Menu>
                 </Sider>
                 <Layout
-                    style={{
-                        padding: '50px 100px',
-                        margin: '0 auto',
-                        overflow: 'auto',
-                    }}
+                    className='layout'
                 >
                     <Content>
                         {children}

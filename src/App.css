@@ -75,7 +75,7 @@
   border-collapse: collapse;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 35px;
   margin: 0;
 }
@@ -193,4 +193,19 @@ Kbd {
 
 kbd:hover, a:hover, img:hover {
   cursor: crosshair;
+}
+
+.layout {
+  padding: 50px 100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+:where(.css-dev-only-do-not-override-zl9ks2).ant-layout .ant-layout-sider-trigger {
+  background:  var(--color-purple);
+}
+
+@media (max-width: 952px) {
+  .layout {
+    padding: 12px;
+  }
 }
