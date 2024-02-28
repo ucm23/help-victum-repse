@@ -15,11 +15,13 @@ import {
     LeftOutlined
 } from '@ant-design/icons';
 
+const link = ' (<a target="_blank" href="https://development.victum-re.online/">Click aquí</a>).'
+
 const data = {
     '/': {
         index: 0,
         title: 'Inicio',
-        intro: '<Kbd>Victum REPSE</Kbd> se dedica a eliminar barreras en el uso de <Kbd>plataformas</Kbd>. Con un equipo especializado, capacitaciones y relevamientos, buscamos mejorar la accesibilidad diaria.',
+        intro: '<Kbd>Victum REPSE</Kbd>'+link+' se dedica a eliminar barreras en el uso de <Kbd>plataformas</Kbd>. Con un equipo especializado, capacitaciones y relevamientos, buscamos mejorar la accesibilidad diaria.',
         'sub-title-1': '¿A qué nos referimos con AYUDA?',
         'sub-conte-1': 'El presente <Kbd>manual</Kbd> o ambiente nos da un <Kbd>desglose</Kbd> de como son los flujos de los procesos en cada uno de los módulos en Victum REPSE (es decir; asistencia, apoyo o colaboración). <br/><br/>También puede hacer referencia a información o recursos que facilitan la comprensión o resolución de problemas.',
         'sub-title-2': 'Estructura de cada proceso',
@@ -56,7 +58,7 @@ const data = {
         'sub-title-2': 'Conceptos a tomar en cuenta',
         'sub-descr-2': 'Para que el proceso de Alta y aprobación de proveedores se pueda llevar acabo, es necesario tomar en cuenta los siguientes <Kbd>criterios</Kbd>:',
         'sub-pros--2': [
-            'Por parte de los <Kbd>Proveedores</Kbd>: Tener conocimiento de como entrar a la plataforma.',
+            'Por parte de los <Kbd>Proveedores</Kbd>: Tener conocimiento de como entrar a la plataforma'+link,
             'Por parte de los <Kbd>Proveedores</Kbd>: Conferir ciertos datos generales y documentos.',
             'Por parte de los <Kbd>Administradores</Kbd>: Verificar y validar con <Kbd>responsabilidad</Kbd> cada uno de los datos proporcionados por los proveedores.',
         ],
@@ -93,7 +95,7 @@ const data = {
         'sub-descr-2': 'Para que el proceso de Alta de nuevos usuarios se pueda llevar acabo, es necesario tomar en cuenta los siguientes <Kbd>criterios</Kbd>:',
         'sub-pros--2': [
             'Por parte de los <Kbd>Administradores</Kbd>: Verificar y validar con <Kbd>responsabilidad</Kbd> cada uno de los datos proporcionados para cada uno de los nuevos usuarios.',
-            'Por parte de los <Kbd>Proveedores</Kbd>: Tener conocimiento de como entrar a la plataforma (<a href="https://development.victum-re.online/">Click aquí</a>).',
+            'Por parte de los <Kbd>Proveedores</Kbd>: Tener conocimiento de como entrar a la plataforma'+link,
         ],
         'sub-title-3': 'Diagrama de flujo',
         'sub-descr-3': 'Un <Kbd>ejemplo</Kbd> del proceso de Alta de nuevos usuarios, se <Kbd>visualiza</Kbd> y <Kbd>separa</Kbd> la participación de cada <Kbd>rol</Kbd> involucrado:',
