@@ -87,7 +87,7 @@ const NavBar = ({ index, children }) => {
                         }}
                     >
                         {menu.map((item, index) => (
-                            <Menu.Item key={index}>
+                            <Menu.Item key={`links-${index}`}>
                                 <Link to={item.route}>
                                     <span>{item.icon} &nbsp; <span>{item.label} </span> </span>
                                 </Link>
