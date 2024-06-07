@@ -53,11 +53,8 @@ const OrderWork = ({ }) => {
 
     const upStatusOne = async (id) => {
         const { data, error } = await supabase.from('travel').update({ status: id }).eq('id', itemId).select()
-        console.log("🚀 ~ upStatusOne ~ data:", data)
-        console.log("🚀 ~ upStatusOne ~ error:", error)
         setItem({ ...item, status: id })
     }
-
 
     if (!loader) {
         return (
@@ -68,7 +65,7 @@ const OrderWork = ({ }) => {
     } else {
         return (
             <Stack gap={5} p={10}>
-                <h1>OrderWork OT-{itemId}</h1>
+                <h1>Orden de trabajo OT-{itemId}</h1>
                 <Timeline items={status} />
                 <Button type="primary" onClick={() => upStatusOne(2)} disabled={item?.status > 1}>Iniciar viaje</Button>
                 <Button type="primary" onClick={() => upStatusOne(3)} disabled={item?.status == 1 || item?.status > 2}>Terminar viaje</Button>
