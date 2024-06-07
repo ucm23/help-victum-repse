@@ -43,8 +43,10 @@ const OrderWork = ({ }) => {
                 setloader(false)
                 return 0;
             }
-            setItem(data[0])
-            setloader(true)
+            if (data.length) {
+                setItem(data[0])
+                setloader(true)
+            }
         } catch (error) {
             console.log("🚀 ~ getData ~ error:", error)
         }
@@ -52,7 +54,8 @@ const OrderWork = ({ }) => {
     }
 
     const upStatusOne = async (id) => {
-        const { data, error } = await supabase.from('travel').update({ status: id }).eq('id', itemId).select()
+        //const { data, error } = 
+        await supabase.from('travel').update({ status: id }).eq('id', itemId).select()
         setItem({ ...item, status: id })
     }
 
