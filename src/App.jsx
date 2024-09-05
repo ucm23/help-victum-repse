@@ -6,7 +6,7 @@ import './App.css'
 function App() {
     return (
         <Routes>
-            <Route path="/order/work/progress/:id" element={<OrderWork />} />
+            {/*<Route path="/order/work/progress/:id" element={<OrderWork />} />*/}
             <Route index element={<Index />} />
             <Route path="*" element={<Index />} />
         </Routes>

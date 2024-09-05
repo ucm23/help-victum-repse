@@ -34,6 +34,11 @@ const menu = [
         icon: React.createElement(FileProtectOutlined),
         route: '/orders'
     },
+    {
+        label: 'Entregas',
+        icon: React.createElement(FileProtectOutlined),
+        route: '/deliveries'
+    },
 ]
 
 

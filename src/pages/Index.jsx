@@ -182,6 +182,43 @@ const data = {
                 url: '/requisitions',
                 slide: 'left',
                 icon: <LeftOutlined />
+            },
+            {
+                label: 'Siguiente',
+                title: ' Entregas',
+                url: '/deliveries',
+                slide: 'right',
+                icon: <RightOutlined />
+            }
+        ]
+    },
+    '/deliveries': {
+        index: 4,
+        title: 'Proceso de Entregas',
+        label: 'Entregas',
+        intro: '<Kbd>Optimizamos</Kbd> el proceso de entrega de mercancías, facilitando la gestión de recepción de productos con proveedores para garantizar eficacia y apoyo al personal involucrado.',
+        'sub-title-1': '¿Qué son las Entregas?',
+        'sub-conte-1': 'Las entregas son el proceso mediante el cual se recibe la mercancía solicitada en una orden de compra, asegurando que se cumplan las condiciones pactadas en cuanto a cantidad, calidad y tiempo de entrega.',
+        'sub-title-2': 'Conceptos a tomar en cuenta',
+        'sub-descr-2': 'Para que el proceso de Entregas se pueda llevar acabo, es necesario tomar en cuenta los siguientes <Kbd>criterios</Kbd>:',
+        'sub-pros--2': [
+            'Al recibir una <Kbd>entrega</Kbd>, es fundamental verificar que los productos coincidan con lo solicitado en la <Kbd>Orden de Compra (OC)</Kbd>.',
+            'El sistema permite registrar <Kbd>evidencias fotográficas y documentos</Kbd> que validan la recepción y el estado de los productos.',
+            'El <Kbd>Reporte Fotográfico y de Recepción de Mercancía</Kbd> garantiza un respaldo de la entrega, detallando las condiciones de los productos recibidos.',
+        ],
+        'sub-title-3': 'Diagrama de flujo',
+        'sub-descr-3': 'Un <Kbd>ejemplo</Kbd> del proceso de Entregas, se <Kbd>visualiza</Kbd> y <Kbd>separa</Kbd> la participación de cada <Kbd>rol</Kbd> involucrado:',
+        diagram: '/imgs/entregas.png',
+        'sub-title-4': 'Manual (PDF)',
+        'sub-descr-4': 'Incluye <Kbd>Glosario</Kbd> y un ejemplo con <Kbd>capturas de pantalla</Kbd>:',
+        'sub-downl-4': 'entregas',
+        pagination: [
+            {
+                label: 'Anterior',
+                title: 'Órdenes de Compra',
+                url: '/orders',
+                slide: 'left',
+                icon: <LeftOutlined />
             }
         ]
     },
